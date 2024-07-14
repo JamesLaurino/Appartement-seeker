@@ -1,0 +1,164 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accueil</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<!--HEADER -->
+<body class="bg-light">
+  <div class="container-fluid d-flex justify-content-center" style="background-color: #3d686f">
+    <div class="text-white h1 m-4">House seeker</div>
+  </div>
+
+<!--  NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"><img width="45" height="45" src="img/houseLogo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link h5" href="index.html">Accueil <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link h5" href="Documents.html">Records</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<!--  Display URL -->
+  <div class="container d-flex justify-content-center mt-5">
+    <div class="mr-3">
+      <p class="h4">Enter the URL : </p>
+    </div>
+    <div class=" w-50">
+      <input id="inputFile" class="form-control w-100" type="text" />
+    </div>
+  </div>
+
+  <div class="container d-flex justify-content-center mt-3">
+    <div class="">
+      <button id="submitBtn" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <form>
+      <div class="row">
+        <div class="col-2">
+          <label for="price1" >Price principal</label>
+          <input type="text" class="form-control" id="price1" name="price1">
+        </div>
+        <div class="col-2">
+          <label for="price2" >Price rent</label>
+          <input type="text" class="form-control" id="price2" name="price2">
+        </div>
+        <div class="col-2">
+          <label for="postalCode">Postal code :</label>
+          <input type="text" class="form-control" id="postalCode" name="postalCode">
+        </div>
+        <div class="col-4">
+          <label for="city">City :</label>
+          <input type="text" class="form-control" id="city" name="city">
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-2">
+          <label for="rooms" >Rooms</label>
+          <input type="text" class="form-control" id="rooms" name="rooms">
+        </div>
+        <div class="col-2">
+          <label for="dimension" >Dimension</label>
+          <input type="text" class="form-control" id="dimension" name="dimension">
+        </div>
+        <div class="col-2">
+          <label for="peb" >Peb</label>
+          <input type="text" class="form-control" id="peb" name="peb">
+        </div>
+        <div class="col-2">
+          <label for="constructYear" >Peb</label>
+          <input type="text" class="form-control" id="constructYear" name="constructYear">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-5">
+          <label for="agency">Agency</label>
+          <input type="text" class="form-control" id="agency" name="agency">
+        </div>
+        <div class="col-4">
+          <label for="type">type</label>
+          <input type="text" class="form-control" id="type" name="type">
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-2">
+          <button id="insertBtn" class="btn btn-success">Save in database</button>
+        </div>
+        <div class="col">
+          <button id="getAllBtn" class="btn btn-primary">List all record</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="container d-flex justify-content-center mt-3">
+    <p style="font-weight: bold" class="w-100 text-center" id="alerting"></p>
+  </div>
+
+
+  <div class="container mt-5" id="tableRecord" style="display: none">
+    <p class="h4 text-primary">List of all habitation</p>
+    <table class="table table-dark table-hover mt-4">
+      <thead>
+      <tr>
+        <th>Type</th>
+        <th>Price</th>
+        <th>Price Rent</th>
+        <th>Postal Code</th>
+        <th>City</th>
+        <th>Nbr Rooms</th>
+        <th>m²</th>
+        <th>PEB</th>
+        <th>Agency</th>
+        <th>Construct Year</th>
+      </tr>
+      </thead>
+      <tbody>
+<!--      <tr>-->
+<!--        <td>John</td>-->
+<!--        <td>Doe</td>-->
+<!--        <td>john@example.com</td>-->
+<!--      </tr>-->
+      </tbody>
+    </table>
+  </div>
+
+
+  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+</body>
+</html>

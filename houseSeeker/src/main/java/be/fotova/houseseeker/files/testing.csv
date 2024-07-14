@@ -1,0 +1,4 @@
+ID, CITY, PEB, DIMENSION, AGENCY, CONTRUCT-YEAR, POSTAL-CODE, PRICE-1, PRICE-2, TYPE, URL, ROOMS
+1, Bruxelles, B, 99, trevi - immobilier neuf, 2023, 1020, 324000, null, Appartement, https://www.immoweb.be/fr/annonce/appartement/a-vendre/bruxelles/1020/11257666, 2
+2, Bruxelles, B, 99, trevi - immobilier neuf, 2023, 1020, 324000, null, Appartement, https://www.immoweb.be/fr/annonce/appartement/a-vendre/bruxelles/1020/11257666, 2
+Test
